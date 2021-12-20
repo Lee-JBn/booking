@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="seatBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.controller.SeatController4">
+	<center>
+		<HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<children>
+				<ScrollPane minWidth="780.0" prefHeight="700.0" prefWidth="732.0">
+					<padding>
+						<Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+					</padding>
+               <content>
+                  <BorderPane fx:id="seatScrollBorder" prefHeight="800" prefWidth="709.0">
+                     <top>
+                        <GridPane BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <BorderPane.margin>
+                              <Insets left="95.0" />
+                           </BorderPane.margin>
+                           <children>
+                              <Label alignment="CENTER" prefWidth="150.0" text="A">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="150.0" text="B" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="150.0" text="C" GridPane.columnIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="150.0" text="D" GridPane.columnIndex="4">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="150.0" text="E" GridPane.columnIndex="5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefWidth="150.0" text="F" GridPane.columnIndex="6">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </top>
+                  </BorderPane>
+               </content>
+				</ScrollPane>
+				<VBox prefHeight="200.0" prefWidth="380.0">
+					<children>
+						<Label alignment="CENTER" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #dddddd;" text="도착편 좌석 현황">
+							<font>
+								<Font name="Consolas" size="15.0" />
+							</font>
+							<VBox.margin>
+								<Insets left="40.0" top="40.0" />
+							</VBox.margin>
+						</Label>
+						<VBox fx:id="seatList" prefHeight="413.0" prefWidth="340.0">
+							<children>
+								<Label alignment="CENTER" prefHeight="32.0" prefWidth="300.0" style="-fx-background-color: #dddddd;">
+									<font>
+										<Font name="Consolas" size="15.0" />
+									</font>
+								</Label>
+							</children>
+							<VBox.margin>
+								<Insets bottom="40.0" left="40.0" top="15.0" />
+							</VBox.margin>
+						</VBox>
+						<Button fx:id="nextBtn" mnemonicParsing="false" onAction="#nextBtnAction" prefHeight="30.0" prefWidth="300.0" text="Next">
+							<VBox.margin>
+								<Insets left="40.0" />
+							</VBox.margin>
+						</Button>
+						<Button mnemonicParsing="false" onAction="#returnBtnAddAction" prefHeight="30.0" prefWidth="300.0" text="Cancel">
+							<VBox.margin>
+								<Insets left="40.0" top="20.0" />
+							</VBox.margin>
+						</Button>
+					</children>
+					<HBox.margin>
+						<Insets />
+					</HBox.margin>
+				</VBox>
+			</children>
+		</HBox>
+	</center>
+</BorderPane>

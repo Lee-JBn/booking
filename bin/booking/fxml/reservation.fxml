@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane fx:id="reservationBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.controller.ReservationController">
+	<center>
+		<ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+			<content>
+				<VBox prefHeight="3000.0" prefWidth="1140.0">
+					<children>
+						<Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="&lt;예약자 정보&gt;">
+							<font>
+								<Font name="Consolas" size="15.0" />
+							</font>
+						</Label>
+						<VBox prefHeight="120.0" prefWidth="100.0">
+							<children>
+								<HBox prefHeight="60.0" prefWidth="200.0">
+									<padding>
+										<Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+									</padding>
+									<children>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #eeeeee;" text="이름">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<TextField fx:id="firstNameTF" prefHeight="30.0" prefWidth="100.0" promptText="(성)">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="10.0" />
+											</HBox.margin>
+										</TextField>
+										<TextField fx:id="nameNameTF" prefHeight="30.0" prefWidth="130.0" promptText="(이름)">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="50.0" />
+											</HBox.margin>
+										</TextField>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #eeeeee;" text="이메일">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<TextField fx:id="emailFrontTF" prefHeight="30.0" prefWidth="170.0">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets />
+											</HBox.margin>
+										</TextField>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="50.0" text="\@">
+											<font>
+												<Font name="Consolas" size="25.0" />
+											</font>
+											<HBox.margin>
+												<Insets />
+											</HBox.margin>
+										</Label>
+										<ComboBox fx:id="emailAddressCB" prefHeight="30.0" prefWidth="244.0">
+											<items>
+												<FXCollections fx:factory="observableArrayList">
+													<String fx:value="gmail.com" />
+													<String fx:value="naver.com" />
+													<String fx:value="daum.net" />
+												</FXCollections>
+											</items>
+										</ComboBox>
+									</children>
+								</HBox>
+								<HBox prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #eeeeee;">
+									<padding>
+										<Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+									</padding>
+									<children>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffffff;" text="전화번호">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<ComboBox fx:id="firstPhoneCB" prefHeight="30.0" prefWidth="100.0">
+											<HBox.margin>
+												<Insets />
+											</HBox.margin>
+											<items>
+												<FXCollections fx:factory="observableArrayList">
+													<String fx:value="010" />
+													<String fx:value="011" />
+													<String fx:value="02" />
+													<String fx:value="031" />
+													<String fx:value="032" />
+												</FXCollections>
+											</items>
+										</ComboBox>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="50.0" text="-">
+											<font>
+												<Font name="Consolas" size="25.0" />
+											</font>
+										</Label>
+										<TextField fx:id="secondPhoneTF" prefHeight="30.0" prefWidth="120.0">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets />
+											</HBox.margin>
+										</TextField>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="50.0" text="-">
+											<font>
+												<Font name="Consolas" size="25.0" />
+											</font>
+										</Label>
+										<TextField fx:id="thirdPhoneTF" prefHeight="30.0" prefWidth="120.0">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</TextField>
+										<Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="인증번호 전송">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="50.0" />
+											</HBox.margin>
+										</Button>
+										<TextField prefHeight="30.0" prefWidth="150.0">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</TextField>
+										<Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="인증">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+										</Button>
+									</children>
+								</HBox>
+							</children>
+						</VBox>
+						<Label text="예약자 정보는 긴급상황 발생 시 즉시 연락이 가능해야 하며, 연락이 불가능한 경우 발생되는 불이익에 대해 당사는 책임지지 않사오니 유의하시기 바랍니다." textFill="RED">
+							<VBox.margin>
+								<Insets left="10.0" right="10.0" top="10.0" />
+							</VBox.margin>
+						</Label>
+						<Label alignment="CENTER" prefHeight="50.0" prefWidth="130.0" text="&lt;탑승자 정보&gt;">
+							<font>
+								<Font name="Consolas" size="15.0" />
+							</font>
+							<VBox.margin>
+								<Insets top="30.0" />
+							</VBox.margin>
+						</Label>
+						<VBox fx:id="passengerList" prefHeight="120.0" prefWidth="100.0">
+							<children>
+								<HBox prefHeight="60.0" prefWidth="200.0">
+									<padding>
+										<Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+									</padding>
+									<children>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #eeeeee;" text="No">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #eeeeee;" text="구분">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #eeeeee;" text="한글 이름">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #eeeeee;" text="영문 성">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #eeeeee;" text="영문 이름">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #eeeeee;" text="생년월일">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #eeeeee;" text="성별">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+									</children>
+								</HBox>
+								<HBox prefHeight="60.0" prefWidth="200.0">
+									<padding>
+										<Insets bottom="15.0" left="10.0" right="10.0" top="15.0" />
+									</padding>
+									<children>
+										<Label alignment="CENTER" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: #eeeeee;" text="1">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</Label>
+										<TextField alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="성인">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</TextField>
+										<TextField prefHeight="30.0" prefWidth="150.0" promptText="예) 이정빈">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</TextField>
+										<TextField prefHeight="30.0" prefWidth="150.0" promptText="예) LEE">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</TextField>
+										<TextField prefHeight="30.0" prefWidth="150.0" promptText="예) JUNGBEEN">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</TextField>
+										<TextField prefHeight="30.0" prefWidth="150.0" promptText="예) 19930209">
+											<font>
+												<Font name="Consolas" size="15.0" />
+											</font>
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+										</TextField>
+										<ComboBox prefHeight="30.0" prefWidth="100.0">
+											<HBox.margin>
+												<Insets right="20.0" />
+											</HBox.margin>
+											<items>
+												<FXCollections fx:factory="observableArrayList">
+													<String fx:value="남성" />
+													<String fx:value="여성" />
+												</FXCollections>
+											</items>
+										</ComboBox>
+									</children>
+								</HBox>
+							</children>
+						</VBox>
+						<TextFlow fx:id="peopleText" prefHeight="300.0" prefWidth="1140.0">
+							<padding>
+								<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+							</padding>
+						</TextFlow>
+						<Button fx:id="nextBtn" mnemonicParsing="false" onAction="#nextBtnAddAction" prefHeight="50.0" prefWidth="100.0" text="Next">
+							<VBox.margin>
+								<Insets left="545.0" />
+							</VBox.margin>
+						</Button>
+					</children>
+				</VBox>
+			</content>
+		</ScrollPane>
+	</center>
+</BorderPane>

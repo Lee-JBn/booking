@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane fx:id="paymentBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.controller.PaymentController">
+	<center>
+		<VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+			<children>
+				<Label prefHeight="50.0" text="결제 정보" textFill="WHITE">
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+					<font>
+						<Font size="20.0" />
+					</font>
+					<padding>
+						<Insets left="20.0" />
+					</padding>
+				</Label>
+				<TabPane prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #dddddd;" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0" tabMinWidth="100.0">
+					<tabs>
+						<Tab style="-fx-font-size: 15;" text="즉시 결제">
+							<content>
+                        <HBox>
+                           <children>
+                              <VBox>
+                                 <children>
+            								<TextFlow fx:id="nowText" minHeight="150.0" prefHeight="150.0" prefWidth="1160.0">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextFlow>
+                                    <HBox>
+                                       <children>
+                                          <VBox prefHeight="309.0" prefWidth="1100.0">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="500.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" text="총 요금">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="20.0" right="30.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="payAll" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #ffffff;">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="20.0" right="30.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets left="30.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #eeeeee;" text="카드 구분">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="15.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <CheckBox mnemonicParsing="false" prefHeight="50.0" text="개인">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </CheckBox>
+                                                      <CheckBox mnemonicParsing="false" prefHeight="50.0" text="법인">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #eeeeee;" text="카드 종류">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="15.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox prefHeight="30.0" prefWidth="130.0">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </ComboBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #eeeeee;" text="카드 번호">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="15.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField prefHeight="30.0" prefWidth="70.0">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="30.0" text="-">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField prefHeight="30.0" prefWidth="70.0">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="30.0" text="-">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField prefHeight="30.0" prefWidth="70.0">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="30.0" text="-">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField prefHeight="30.0" prefWidth="70.0">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #eeeeee;" text="소유주 이름">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="15.0" />
+                                                         </padding>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField prefHeight="30.0" prefWidth="130.0">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="417.0" prefWidth="1160.0">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="200.0" />
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #eeeeee;" text="소유주 국적">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <CheckBox mnemonicParsing="false" prefHeight="50.0" text="내국인">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </CheckBox>
+                                                      <CheckBox mnemonicParsing="false" prefHeight="50.0" text="외국인">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #eeeeee;" text="할부 기간">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <ComboBox prefHeight="30.0" prefWidth="130.0">
+                                                         <HBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </HBox.margin>
+                                                      </ComboBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #eeeeee;" text="유효 기간">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <TextField prefHeight="30.0" prefWidth="80.0" promptText="예) 2019">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="30.0" text="-">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField prefHeight="30.0" prefWidth="80.0" promptText="예) 02">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="50.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #eeeeee;" text="생년월일">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <TextField prefHeight="30.0" prefWidth="130.0" promptText="예) YYYYMMDD">
+                                                         <HBox.margin>
+                                                            <Insets right="50.0" top="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                      <Label prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #eeeeee;" text="성별">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <CheckBox mnemonicParsing="false" prefHeight="50.0" text="남자">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="20.0" />
+                                                         </HBox.margin>
+                                                      </CheckBox>
+                                                      <CheckBox mnemonicParsing="false" prefHeight="50.0" text="여자">
+                                                         <font>
+                                                            <Font name="Consolas" size="15.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+							</content>
+						</Tab>
+						<Tab style="-fx-font-size: 15;" text="나중에 결제">
+                     <content>
+                        <VBox>
+                           <children>
+                              <TextFlow fx:id="laterText" minHeight="150.0" prefHeight="150.0" prefWidth="1160.0">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </TextFlow>
+                           </children>
+                        </VBox>
+                     </content></Tab>
+					</tabs>
+				</TabPane>
+            <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label prefHeight="50.0" text="항공권 규정 및 확인 및 동의">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="50.0" text="[필수]" textFill="RED">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <CheckBox fx:id="agree" mnemonicParsing="false" prefHeight="50.0" text="동의합니다.">
+                     <HBox.margin>
+                        <Insets left="670.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Consolas" size="15.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox prefWidth="1187.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#nextBtnAddAction" prefHeight="50.0" prefWidth="200.0" text="결제하기">
+                     <font>
+                        <Font name="Consolas" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#returnBtnAddAction" prefHeight="50.0" prefWidth="200.0" text="돌아가기">
+                     <font>
+                        <Font name="Consolas" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="330.0" />
+               </padding>
+            </HBox>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>

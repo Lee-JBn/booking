@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.controller.CheckBookingController">
+   <center>
+      <HBox maxHeight="588.0" maxWidth="960.0" minHeight="588.0" minWidth="960.0" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: #dbfaff; -fx-border-color: #ddaaaa;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="903.0" style="-fx-background-color: white; -fx-border-color: #eeeedd;" text="예약 확인">
+                     <font>
+                        <Font name="Consolas" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="160.0" prefWidth="200.0">
+                     <children>
+                        <VBox minWidth="150.0" prefHeight="100.0" prefWidth="150.0">
+                           <children>
+                              <MaterialIconView glyphName="PHONE" size="100" />
+                           </children>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="450.0">
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                           <children>
+                              <JFXComboBox fx:id="firstNum" prefHeight="30.0" prefWidth="92.6666">
+                                 <VBox.margin>
+                                    <Insets bottom="25.0" />
+                                 </VBox.margin>
+                                 <items>
+									<FXCollections fx:factory="observableArrayList">
+										<String fx:value="010" />
+										<String fx:value="011" />
+										<String fx:value="02" />
+										<String fx:value="031" />
+										<String fx:value="032" />
+									</FXCollections>
+								</items>
+                              </JFXComboBox>
+                              <HBox maxHeight="30.0" prefHeight="30.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXTextField fx:id="secondNum" maxWidth="150.0" prefHeight="30.0" prefWidth="100.0" />
+                                    <Label alignment="CENTER" maxHeight="30.0" prefHeight="30.0" prefWidth="50.0" text="-">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="thirdNum" maxWidth="150.0" prefHeight="30.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXButton onAction="#checkBtnAddAction" prefHeight="30.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-color: #eeeedd;" text="Check">
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin></JFXButton>
+                  <JFXButton onAction="#bookingCancelBtnAddAction" prefHeight="30.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-color: #eeeedd;" text="Booking Cancel Request">
+                     <VBox.margin>
+                        <Insets bottom="170.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton onAction="#returnBtnAddAction" prefHeight="30.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-color: #eeeedd;" text="돌아가기">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="550.0" style="-fx-border-color: #aaaaee; -fx-background-color: #ffffff;">
+               <children>
+                  <GridPane prefHeight="650.0" prefWidth="547.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="이름 :">
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nameLabel" alignment="CENTER" prefHeight="30.0" prefWidth="248.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="이메일 :">
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="emailLabel" alignment="CENTER" prefHeight="30.0" prefWidth="248.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="전화번호 :">
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="phoneLabel" alignment="CENTER" prefHeight="30.0" prefWidth="248.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="10">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="예약 시간:">
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="startTime" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="arriveTime" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="11">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="예약 좌석:">
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="startSeat" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="arriveSeat" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="출발 공항 :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="startAirport" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="arriveAirport" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="출발편">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="도착편">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="startDate" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="arriveDate" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="9">
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="항공사 :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="startAirline" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="arriveAirline" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="8">
+                           <padding>
+                              <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0" text="도착 공항 :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="startAirport1" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="arriveAirport1" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children></VBox>
+         </children>
+      </HBox>
+   </center>
+   <padding>
+      <Insets bottom="120.0" left="100.0" right="100.0" top="120.0" />
+   </padding>
+</BorderPane>

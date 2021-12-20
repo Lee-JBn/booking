@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="750.0" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.controller.AdminController">
+	<children>
+		<MenuBar prefHeight="20.0" VBox.vgrow="NEVER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="New" />
+						<MenuItem mnemonicParsing="false" text="Open…" />
+						<Menu mnemonicParsing="false" text="Open Recent" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Close" />
+						<MenuItem mnemonicParsing="false" text="Save" />
+						<MenuItem mnemonicParsing="false" text="Save As…" />
+						<MenuItem mnemonicParsing="false" text="Revert" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Preferences…" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Quit" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Edit">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Undo" />
+						<MenuItem mnemonicParsing="false" text="Redo" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Cut" />
+						<MenuItem mnemonicParsing="false" text="Copy" />
+						<MenuItem mnemonicParsing="false" text="Paste" />
+						<MenuItem mnemonicParsing="false" text="Delete" />
+						<SeparatorMenuItem mnemonicParsing="false" />
+						<MenuItem mnemonicParsing="false" text="Select All" />
+						<MenuItem mnemonicParsing="false" text="Unselect All" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<AnchorPane maxHeight="730.0" maxWidth="-1.0" prefHeight="730.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+			<children>
+				<JFXTabPane maxHeight="725.0" prefHeight="725.0" prefWidth="1200.0">
+					<tabs>
+						<Tab text="항공기 조회">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1200.0" style="-fx-background-color: #bcf0f7;">
+									<children>
+										<VBox layoutX="50.0" layoutY="40.0" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<children>
+												<HBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" style="-fx-background-color: #ffffff;">
+													<children>
+														<Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="항공사">
+															<font>
+																<Font name="Consolas" size="17.0" />
+															</font>
+															<HBox.margin>
+																<Insets />
+															</HBox.margin>
+														</Label>
+														<JFXComboBox fx:id="airline" prefHeight="30.0" prefWidth="150.0">
+															<HBox.margin>
+																<Insets right="30.0" />
+															</HBox.margin>
+															<items>
+																<FXCollections fx:factory="observableArrayList">
+																	<String fx:value="Air" />
+																</FXCollections>
+															</items>
+														</JFXComboBox>
+														<Button fx:id="airplaneButton" mnemonicParsing="false" onAction="#airplaneButtonSearchAction" prefHeight="30.0" prefWidth="50.0" text="선택" />
+													</children>
+													<padding>
+														<Insets left="15.0" top="10.0" />
+													</padding>
+												</HBox>
+												<HBox fx:id="airplaneHBox" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" style="-fx-background-color: #f5f5f5;">
+													<padding>
+														<Insets left="15.0" top="10.0" />
+													</padding>
+												</HBox>
+												<HBox fx:id="informationHBox" maxHeight="80.0" minHeight="80.0" prefHeight="80.0" style="-fx-background-color: #ffffff;">
+													<padding>
+														<Insets left="15.0" top="10.0" />
+													</padding>
+												</HBox>
+												<HBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" style="-fx-background-color: #f5f5f5;">
+													<padding>
+														<Insets left="15.0" top="10.0" />
+													</padding>
+												</HBox>
+												<HBox maxHeight="250.0" minHeight="250.0" prefHeight="250.0" style="-fx-background-color: #ffffff;">
+													<padding>
+														<Insets left="15.0" top="10.0" />
+													</padding>
+													<children>
+														<Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="배정 정보">
+															<font>
+																<Font name="Consolas" size="17.0" />
+															</font>
+															<HBox.margin>
+																<Insets right="30.0" />
+															</HBox.margin>
+														</Label>
+																<TableView fx:id="information" prefHeight="486.0" prefWidth="830.0">
+																	<columns>
+																		<TableColumn fx:id="startDate" minWidth="138.0" prefWidth="75.0" text="출발일자" />
+																		<TableColumn fx:id="startTime" minWidth="138.0" prefWidth="75.0" text="출발시각" />
+																		<TableColumn fx:id="startAirport" minWidth="138.0" prefWidth="75.0" text="출발지" />
+																		<TableColumn fx:id="arriveDate" minWidth="138.0" prefWidth="75.0" text="도착일자" />
+                                                <TableColumn fx:id="arriveAirport" minWidth="138.0" prefWidth="75.0" text="도착지" />
+                                                <TableColumn fx:id="emptySeat" minWidth="138.0" prefWidth="75.0" text="잔여 좌석" />
+																	</columns>
+																</TableView>
+													</children>
+												</HBox>
+												<HBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="1120.0" style="-fx-background-color: #ffffff;">
+													<padding>
+														<Insets top="30.0" />
+													</padding>
+                                       <children>
+                                          <JFXButton buttonType="RAISED" onAction="#searchBtnAddAction" prefWidth="100.0" style="-fx-background-color: #eeeeee;" text="조회" />
+                                       </children>
+												</HBox>
+											</children>
+										</VBox>
+									</children>
+									<padding>
+										<Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+									</padding>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="운항 등록">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="631.0" style="-fx-background-color: #bcf0f7;">
+									<padding>
+										<Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+									</padding>
+									<children>
+										<VBox prefHeight="693.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<children>
+												<HBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" style="-fx-background-color: #eeeeee;">
+													<children>
+														<Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="항공사">
+															<font>
+																<Font name="Consolas" size="17.0" />
+															</font>
+															<HBox.margin>
+																<Insets />
+															</HBox.margin>
+														</Label>
+														<JFXComboBox fx:id="airline2" prefHeight="30.0" prefWidth="150.0">
+															<HBox.margin>
+																<Insets right="40.0" />
+															</HBox.margin>
+															<items>
+																<FXCollections fx:factory="observableArrayList">
+																	<String fx:value="Air" />
+																</FXCollections>
+															</items>
+														</JFXComboBox>
+                                          <Button mnemonicParsing="false" onAction="#airplaneButtonAddAction" prefHeight="30.0" prefWidth="50.0" text="확인">
+                                             <font>
+                                                <Font name="Consolas" size="12.0" />
+                                             </font>
+                                          </Button>
+													</children>
+													<padding>
+														<Insets top="10.0" />
+													</padding>
+												</HBox>
+                                    <HBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" style="-fx-background-color: #dfdfdf;">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="100.0" text="항공기">
+                                             <font>
+                                                <Font name="Consolas" size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="airplaneList" prefHeight="30.0" prefWidth="150.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets left="50.0" top="10.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+												<HBox>
+													<children>
+														<VBox>
+															<children>
+																<HBox prefHeight="50.0">
+																	<padding>
+																		<Insets left="10.0" top="10.0" />
+																	</padding>
+																	<children>
+																		<Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="출발지">
+																			<font>
+																				<Font name="Consolas" size="17.0" />
+																			</font>
+																			<HBox.margin>
+																				<Insets right="30.0" />
+																			</HBox.margin>
+																		</Label>
+                                                      <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="도착지">
+                                                         <font>
+                                                            <Font name="Consolas" size="17.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+																		<Label alignment="CENTER" prefHeight="30.0" prefWidth="160.0" text="출발일">
+																			<font>
+																				<Font name="Consolas" size="17.0" />
+																			</font>
+																			<HBox.margin>
+																				<Insets right="30.0" />
+																			</HBox.margin>
+																		</Label>
+																		<Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="시간">
+																			<font>
+																				<Font name="Consolas" size="17.0" />
+																			</font>
+																			<HBox.margin>
+																				<Insets right="150.0" />
+																			</HBox.margin>
+																		</Label>
+																	</children>
+																</HBox>
+																<HBox prefHeight="50.0">
+																	<children>
+																		<JFXComboBox fx:id="fromAirport" prefWidth="130.0">
+																			<HBox.margin>
+																				<Insets right="30.0" />
+																			</HBox.margin>
+																		</JFXComboBox>
+                                                      <JFXComboBox fx:id="toAirport" prefWidth="130.0">
+                                                         <HBox.margin>
+                                                            <Insets right="30.0" />
+                                                         </HBox.margin>
+                                                      </JFXComboBox>
+																		<JFXDatePicker fx:id="fromDay">
+																			<HBox.margin>
+																				<Insets right="30.0" />
+																			</HBox.margin>
+																		</JFXDatePicker>
+                                                      <JFXTimePicker fx:id="fromTime" />
+																	</children>
+																	<padding>
+																		<Insets left="10.0" top="10.0" />
+																	</padding>
+																</HBox>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="TOP_RIGHT">
+													<children>
+														<VBox />
+													</children>
+												</HBox>
+                                    <HBox prefHeight="200.0" prefWidth="1060.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#timeSetButton" prefHeight="30.0" prefWidth="100.0" text="Button" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="480.0" top="70.0" />
+                                       </padding>
+                                    </HBox>
+											</children>
+											<padding>
+												<Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+											</padding>
+										</VBox>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="예약 수정">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="665.0" style="-fx-background-color: #bcf0f7;">
+									<children>
+										<VBox layoutX="574.0" layoutY="237.0" prefHeight="693.3333333333334" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" minHeight="30.0" minWidth="100.0" text="예약자 목록">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableView" layoutX="50.0" prefHeight="200.0" prefWidth="800.0">
+                                            <columns>
+                                              <TableColumn fx:id="viewName" minWidth="100.0" prefWidth="75.0" text="이름" />
+                                              <TableColumn fx:id="viewEmail" minWidth="100.0" prefWidth="75.0" text="이메일" />
+                                                <TableColumn fx:id="viewPhone" minWidth="100.0" prefWidth="75.0" text="전화번호" />
+                                                <TableColumn fx:id="viewStart" minWidth="100.0" prefWidth="75.0" text="출발편" />
+                                                <TableColumn fx:id="viewStartSeat" minWidth="100.0" prefWidth="75.0" text="좌석" />
+                                                <TableColumn fx:id="viewArrive" minWidth="100.0" prefWidth="75.0" text="도착편" />
+                                                <TableColumn fx:id="viewArriveSeat" minWidth="100.0" prefWidth="75.0" text="좌석" />
+                                                <TableColumn fx:id="viewCancelRequest" minWidth="100.0" prefWidth="75.0" text="취소 요청" />
+                                            </columns>
+                                          </TableView>
+                                          <JFXButton layoutX="934.0" layoutY="126.0" onAction="#cancelBtnAddAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #eeeeee;" text="예약 취소" />
+                                          <JFXButton layoutX="934.0" layoutY="65.0" onAction="#refreshBtnAddAction" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #eeeeee;" text="새로고침" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children></VBox>
+									</children>
+									<padding>
+										<Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+									</padding>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+				</JFXTabPane>
+			</children>
+		</AnchorPane>
+	</children>
+</VBox>

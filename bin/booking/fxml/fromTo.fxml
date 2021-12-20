@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="fromToBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.291" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booking.controller.FromToController">
+	<center>
+		<VBox BorderPane.alignment="CENTER">
+			<children>
+				<HBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="200.0">
+					<padding>
+						<Insets left="1030.0" right="10.0" top="10.0" />
+					</padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+				</HBox>
+				<HBox style="-fx-background-color: #ffffff;">
+					<children>
+						<VBox>
+							<children>
+								<HBox prefHeight="50.0" prefWidth="200.0">
+									<children>
+										<Label alignment="CENTER" maxHeight="50.0" maxWidth="450.0" prefHeight="50.0" prefWidth="450.0" style="-fx-background-color: #4fe2b1;" text="출발편" textFill="#575757">
+											<HBox.margin>
+												<Insets left="10.0" />
+											</HBox.margin>
+											<font>
+												<Font name="Consolas Bold" size="20.0" />
+											</font>
+										</Label>
+										<Label alignment="CENTER" maxHeight="50.0" maxWidth="450.0" prefHeight="50.0" prefWidth="450.0" style="-fx-background-color: #eb7676;" text="도착편" textFill="WHITE">
+											<font>
+												<Font name="Consolas Bold" size="20.0" />
+											</font>
+										</Label>
+									</children>
+								</HBox>
+								<HBox prefHeight="450.0" prefWidth="200.0">
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+									<children>
+										<VBox prefHeight="467.0" prefWidth="450.0">
+											<children>
+                                    <TableView fx:id="startTV" prefHeight="477.0" prefWidth="200.0">
+                                      <columns>
+                                        <TableColumn fx:id="startAirline" prefWidth="50.0" text="항공사" />
+                                        <TableColumn fx:id="startSerial" prefWidth="70.0" text="일련번호" />
+                                        <TableColumn fx:id="startAirport" prefWidth="75.0" text="출발지" />
+                                        <TableColumn fx:id="startTime" prefWidth="90.0" text="출발시각" />
+                                        <TableColumn fx:id="startArriveAirport" prefWidth="75.0" text="도착지" />
+                                        <TableColumn fx:id="startArriveTime" prefWidth="90.0" text="도착시각" />
+                                      </columns>
+                                    </TableView>
+											</children>
+										</VBox>
+										<VBox prefHeight="200.0" prefWidth="450.0">
+											<children>
+                                    <TableView fx:id="arriveTV" prefHeight="477.0" prefWidth="200.0">
+                                       <columns>
+                                          <TableColumn fx:id="arriveAirline" prefWidth="50.0" text="항공사" />
+                                          <TableColumn fx:id="arriveSerial" prefWidth="70.0" text="일련번호" />
+                                          <TableColumn fx:id="arriveStartAirport" prefWidth="75.0" text="출발지" />
+                                          <TableColumn fx:id="arriveStartTime" prefWidth="90.0" text="출발시각" />
+                                          <TableColumn fx:id="arriveAirport" prefWidth="75.0" text="도착지" />
+                                          <TableColumn fx:id="arriveTime" prefWidth="90.0" text="도착시각" />
+                                       </columns>
+                                    </TableView>
+											</children>
+										</VBox>
+									</children>
+								</HBox>
+								<HBox prefHeight="100.0" prefWidth="1140.0">
+									<children>
+										<VBox prefHeight="200.0" prefWidth="100.0">
+											<padding>
+												<Insets left="10.0" right="10.0" />
+											</padding>
+											<children>
+												<Label alignment="CENTER" maxWidth="80.0" minWidth="80.0" prefHeight="15.0" prefWidth="80.0" style="-fx-background-color: #4fe2b1;" text="출발편">
+													<VBox.margin>
+														<Insets bottom="10.0" top="30.0" />
+													</VBox.margin>
+													<font>
+														<Font name="Consolas Bold" size="15.0" />
+													</font>
+												</Label>
+												<Label alignment="CENTER" maxWidth="80.0" minWidth="80.0" prefHeight="15.0" prefWidth="80.0" style="-fx-background-color: #eb7676;" text="도착편" textFill="WHITE">
+													<font>
+														<Font name="Consolas Bold" size="15.0" />
+													</font>
+												</Label>
+											</children>
+										</VBox>
+                              <TableView fx:id="fromToTV" prefHeight="80.0" prefWidth="810.0">
+                                <columns>
+                                  <TableColumn fx:id="fromToAirline" prefWidth="100.0" text="항공사" />
+                                  <TableColumn fx:id="fromToSerial" prefWidth="138.0" text="일련번호" />
+                                    <TableColumn fx:id="fromToStart" prefWidth="115.0" text="출발지" />
+                                    <TableColumn fx:id="fromToStartDate" prefWidth="170.0" text="출발시각" />
+                                    <TableColumn fx:id="fromToArrive" prefWidth="115.0" text="도착지" />
+                                    <TableColumn fx:id="fromToArriveDate" prefWidth="170.0" text="도착시각" />
+                                </columns>
+                              </TableView>
+									</children>
+									<VBox.margin>
+										<Insets />
+									</VBox.margin>
+									<padding>
+										<Insets bottom="10.0" right="10.0" top="10.0" />
+									</padding>
+								</HBox>
+							</children>
+						</VBox>
+						<AnchorPane maxWidth="240.0" minWidth="240.0" prefHeight="600.0" prefWidth="240.0">
+							<children>
+								<JFXButton fx:id="nextBtn" layoutX="5.0" layoutY="520.0" mnemonicParsing="false" onAction="#nextBtnAction" prefWidth="220.0" style="-fx-background-color: #eeeeee;" text="Next" />
+								<JFXButton fx:id="cancelBtn" layoutX="5.0" layoutY="560.0" mnemonicParsing="false" onAction="#cancelBtnAction" prefWidth="220.0" style="-fx-background-color: #eeeeee;" text="Cancel" />
+							</children>
+							<padding>
+								<Insets bottom="10.0" right="10.0" top="10.0" />
+							</padding>
+						</AnchorPane>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>
